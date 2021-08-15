@@ -1,0 +1,10 @@
+#!name=招商银行信用卡-DailyBonus
+#!desc=自动签到领积分
+#!system=ios
+
+[Script]
+http-request ^https:\/\/weclub\.xyk\.cmbchina\.com\/SCRMCustomActivityFront\/checkin-plus\/request\/get-home-data\.json\?activityCode=checkinPlus script-path=cmbchina.cookie.js
+cron “5 5 0 * * *” script-path=cmbchina.js
+
+[MITM]
+hostname = %APPEND% weclub.xyk.cmbchina.com
