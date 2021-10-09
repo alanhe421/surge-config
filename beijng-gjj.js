@@ -2,6 +2,8 @@
  * 下载北京通App，访问公积金页面，提示写入Cookie成功即可
  * query-beijing-gjj-cookie = type=http-request,pattern=^https:\/\/service\.beijingtoon\.com/bjt-housing-fund\/fund\/getPersonalLedger,script-path=beijng-gjj.js
  * query-beijing-gjj-task = type=cron,cronexp=0 0 1 7 * ?,script-path=beijng-gjj.js
+ * [MITM]
+ * hostname = %APPEND% service.beijingtoon.com:443
  */
 let isGetCookie = typeof $request !== 'undefined';
 const cookieKey = 'gjj_cookie';

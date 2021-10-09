@@ -29,4 +29,4 @@ query-fee-cookie = type=http-request,pattern=^https://m\.client\.10010\.com/serv
 query-fee-task = type=cron,cronexp=0 0 1 7 * ?,script-path=query-fee.js
 
 [MITM]
-hostname = %APPEND% weclub.xyk.cmbchina.com api.m.jd.com *.iqiyi.com *.v2ex.com grwsyw.gjj.beijing.gov.cn:443 m.client.10010.com:443
+hostname = %APPEND%,weclub.xyk.cmbchina.com,api.m.jd.com,*.iqiyi.com *.v2ex.com,service.beijingtoon.com:443,m.client.10010.com:443
