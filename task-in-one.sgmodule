@@ -1,0 +1,32 @@
+#!name=Task in one
+#!desc=多App签到
+#!system=ios
+
+# 0 0 7 * * ?
+# */5 * * * * ? 
+
+[Script]
+什么值得买 = type=cron,cronexp=“0 0 7 * * ?”,script-path=smzdm.js
+
+v2ex-task=type=cron,cronexp="0 0 7 * * ?",script-path=v2ex.js
+v2ex-cookie=type=http-request,pattern=^https:\/\/www\.v2ex\.com\/mission\/daily,script-path=v2ex.cookie.js
+
+招商银行信用卡-cookie=type=http-request,pattern=^https:\/\/weclub\.xyk\.cmbchina\.com\/SCRMCustomActivityFront/checkin-plus/request/checkin\.json,script-path=cmbchina.js
+招商银行信用卡-task=type=cron,cronexp="0 0 7 * * ?",script-path=cmbchina.js
+
+jd-cookie=type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean max-size=0,script-path=JD_DailyBonus.js
+jd-task=type=cron,cronexp="0 7 * * *",script-path=JD_DailyBonus.js
+
+iqiyi-cookie=type=http-request,pattern=https?:\/\/.*\.iqiyi\.com\/.*authcookie= script-path=iQIYI.js
+iqiyi-task=type=cron,cronexp="0 7 * * *",script-path=iQIYI.js
+
+# 北京公积金,每月1号通知
+query-beijing-gjj-cookie = type=http-request,pattern=^https:\/\/service\.beijingtoon\.com/bjt-housing-fund\/fund\/getPersonalLedger,script-path=beijng-gjj.js
+query-beijing-gjj-task = type=cron,cronexp=0 0 1 7 * ?,script-path=beijng-gjj.js
+
+# 联通客户端,每月1号通知
+query-fee-cookie = type=http-request,pattern=^https://m\.client\.10010\.com/servicequerybusiness/balancenew/accountBalancenew\.htm,script-path=query-fee.js
+query-fee-task = type=cron,cronexp=0 0 1 7 * ?,script-path=query-fee.js
+
+[MITM]
+hostname = %APPEND% weclub.xyk.cmbchina.com api.m.jd.com *.iqiyi.com *.v2ex.com grwsyw.gjj.beijing.gov.cn:443 m.client.10010.com:443
