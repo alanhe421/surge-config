@@ -1,0 +1,9 @@
+#!name=Redirect URL
+#!desc=重定向某些URL
+
+[Script]
+# 重定向某些URL
+redirectUrl = type=http-response,pattern=^https://weixin110.qq.com/cgi-bin/mmspamsupport-bin/newredirectconfirmcgi,script-path=redirect.js,debug=true,requires-body=true
+
+[MITM]
+hostname = %APPEND%,weixin110.qq.com
