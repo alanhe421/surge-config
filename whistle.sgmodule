@@ -1,0 +1,8 @@
+#!name=browser proxy under whistle
+#!desc=浏览器【Chrome,Safari】走Whistle代理，需要创建名称为Dev-Whistle-local的whistle代理节点
+#!system=mac
+
+[Rule]
+# 解决开发调试-Whistle
+PROCESS-NAME,Google Chrome*,Dev-Whistle-local
+OR,((PROCESS-NAME,Safari*), (PROCESS-NAME,/Library/Apple/System/Library/StagedFrameworks/Safari/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking), (PROCESS-NAME,/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking)),Dev-Whistle-local
