@@ -1,0 +1,8 @@
+#!name=Bing Edge UA
+#!desc=Bing网站模拟为在Edge下访问，修改UA头部
+
+[MITM]
+hostname = %APPEND% *.bing.com, bing.com
+
+[Script]
+script = type=http-request,pattern=^http(s)?:\/\/(?:.*\.)?bing\.com,script-path=edge-useragent.js,requires-body=false
