@@ -5,4 +5,4 @@
 hostname = %APPEND% *.bing.com, bing.com
 
 [Script]
-script = type=http-request,pattern=^http(s)?:\/\/(?:.*\.)?bing\.com,script-path=edge-useragent.js,requires-body=false
+bing-edge-ua = type=http-request,pattern=^http(s)?:\/\/(?:.*\.)?bing\.com,script-path=bing-edge-ua.js,requires-body=false
