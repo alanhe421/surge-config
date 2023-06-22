@@ -5,3 +5,4 @@
 - 浏览器【Chrome/Safari/Edge/Firefox】走Whistle代理
 - Bing访问走Edge UA,打破必须用Edge/Bing限制
 - 阿里云盘签到
+- 部分App跳过代理检测

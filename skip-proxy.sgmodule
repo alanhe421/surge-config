@@ -1,0 +1,7 @@
+#!name=Skip Proxy
+#!desc=部分App跳过代理
+
+[General]
+skip-proxy = %APPEND% www.baidu.com
+
+# www.baidu.com 国家电网
