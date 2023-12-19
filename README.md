@@ -1,9 +1,10 @@
 ## 功能
-- 北京市公积金查询
-- 话费查询
-- 微信拦截-自动跳转
-- 浏览器【Chrome/Safari/Edge/Firefox】走Whistle代理
-- Bing访问走Edge UA,打破必须用Edge/Bing限制
-- 阿里云盘签到
-- 部分App跳过代理检测
-- [ShadowSocks流量](https://portal.shadowsocks.au/aff.php?aff=27252)
+- 北京市公积金查询-[beijng-gjj.js](beijng-gjj.js)
+- 话费查询-[query-fee.js](query-fee.js)
+- 微信拦截-自动跳转-[redirect.sgmodule](redirect.sgmodule)
+- 浏览器【Chrome/Safari/Edge/Firefox】走Whistle代理-[whistle.sgmodule](whistle.sgmodule)
+- Bing访问走Edge UA,打破必须用Edge/Bing限制-[bing-edge-ua.sgmodule](bing-edge-ua.sgmodule)
+- 阿里云盘签到-[aliyunpan.sgmodule](aliyunpan.sgmodule)
+- 部分App跳过代理检测-[skip-proxy.sgmodule](skip-proxy.sgmodule)
+- ShadowSocks流量面板-[sub-info-ss.sgmodule](sub-info-ss.sgmodule)
+   - [机场](https://portal.shadowsocks.au/aff.php?aff=27252)
