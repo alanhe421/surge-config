@@ -6,3 +6,4 @@
 - Bing访问走Edge UA,打破必须用Edge/Bing限制
 - 阿里云盘签到
 - 部分App跳过代理检测
+- [ShadowSocks流量](https://portal.shadowsocks.au/aff.php?aff=27252)

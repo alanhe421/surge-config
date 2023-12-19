@@ -1,0 +1,9 @@
+#!name=SS订阅流量信息
+#!desc=显示SS订阅流量信息以及套餐到期时间
+#!system=ios
+
+[Panel]
+PanelA = title="SS订阅详情",content="loading...",script-name=sub-info-ss,update-interval=60
+
+[Script]
+sub-info-ss = script-path=sub-info-ss.js,type=generic
