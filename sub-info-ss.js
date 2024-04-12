@@ -3,7 +3,7 @@ const icon = 'airplane.circle.fill';
 const iconColor = '#32CD32';
 const iconColorDanger = '#DC3545';
 
-// ss地址
+// ss订阅地址
 const apiUrl =
   'https://s1.trojanflare.one/{{id}}';
 // ua头部
