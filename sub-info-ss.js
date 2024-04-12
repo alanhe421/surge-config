@@ -1,13 +1,12 @@
-let title = 'SS订阅详情';
-let icon = 'airplane.circle';
-let iconColor = '#32CD32';
+const title = 'ShadowSocks订阅';
+const icon = 'airplane.circle.fill';
+const iconColor = '#32CD32';
+const iconColorDanger = '#DC3545';
+
 // ss地址
 const apiUrl =
-  'https://portal.shadowsocks.nz/clientarea.php?action=productdetails&id=xxxx';
-// cookie  
-const cookie =
-  '';
-// ua头部  
+  'https://s1.trojanflare.one/{{id}}';
+// ua头部
 const ua =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
@@ -22,18 +21,16 @@ getDataInfo(apiUrl, function (result) {
       title: `${title} | ${hour}:${minutes}`,
       content: '获取失败，请检查模块或网络',
       icon: icon,
-      'icon-color': '#ff4500'
+      'icon-color': iconColorDanger
     });
   }
   const htmlCnt = result.data;
-  const infoArr=htmlCnt.match(/(?<=<span class="list-info-text">).+(?=<\/)/g);
-  const used = htmlCnt.match(/(?<=<span class="number">)(\d|\.)+/)[0];
-  const allowance = htmlCnt.match(/(?<=<span class="allowance">).+(?=<\/)/)[0];
-  const deadline = infoArr[5];
+  const remaining = htmlCnt.match(/(?<=Remaining Traffic)(.+)(?=")/)?.[0]?.trim();
+  const deadline = htmlCnt.match(/(?<=Valid until )(.+)(?=\sRemaining)/)?.[0]?.trim();
 
   $done({
     title: `${title}`,
-    content: `已用流量${used} GB，每月流量上限${allowance}\n到期时间${deadline}`,
+    content: `本月剩余流量(${remaining}）\n订阅到期时间${deadline}`,
     icon: `${icon}`,
     'icon-color': `${iconColor}`
   });
@@ -42,7 +39,6 @@ getDataInfo(apiUrl, function (result) {
 function getDataInfo(url, callback) {
   const headers = {
     'User-Agent': ua,
-    Cookie: cookie
   };
 
   $httpClient.get(
