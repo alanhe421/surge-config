@@ -3,7 +3,7 @@
 #!system=ios
 
 [Panel]
-PanelA = title="SS订阅详情",content="loading...",script-name=sub-info-ss,update-interval=60
+PanelA = title="SS订阅详情",content="loading...",script-name=sub-info-ss,update-interval=60,argument=url=机场订阅地址
 
 [Script]
 sub-info-ss = script-path=sub-info-ss.js,type=generic

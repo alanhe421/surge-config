@@ -3,12 +3,15 @@ const icon = 'airplane.circle.fill';
 const iconColor = '#32CD32';
 const iconColorDanger = '#DC3545';
 
-// ss订阅地址
-const apiUrl =
-  'https://s1.trojanflare.one/{{id}}';
-// ua头部
+
+// ua头部  
 const ua =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+
+const args = getArgs();
+
+// ss地址
+const apiUrl = args.url;
 
 getDataInfo(apiUrl, function (result) {
   let now = new Date();
@@ -50,5 +53,16 @@ function getDataInfo(url, callback) {
         callback({ error: false, data: data });
       }
     }
+  );
+}
+
+
+
+function getArgs() {
+  return Object.fromEntries(
+    $argument
+      .split("&")
+      .map((item) => item.split("="))
+      .map(([k, v]) => [k, decodeURIComponent(v)])
   );
 }
