@@ -3,4 +3,4 @@
 #!system=Mac
 
 [Script]
-ChatGPT Desktop = type=http-response,pattern=https://ab.chatgpt.com/v1/initialize,requires-body=1,max-size=0,debug=1,script-path=chatgpt-desktop.js
+ChatGPT Desktop = type=http-response,pattern=https://ab.chatgpt.com/v1/initialize,requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/alanhg/surge-config/main/chatgpt-desktop.js
