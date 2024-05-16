@@ -8,3 +8,4 @@
 - 部分App跳过代理检测-[skip-proxy.sgmodule](skip-proxy.sgmodule)
 - ShadowSocks流量面板-[sub-info-ss.sgmodule](sub-info-ss.sgmodule)
    - [机场](https://portal.shadowsocks.au/aff.php?aff=27252)
+- ChatGPT Mac桌面版解锁-[chatgpt-desktop.sgmodule](https://raw.githubusercontent.com/alanhg/surge-config/main/chatgpt-desktop.sgmodule)
