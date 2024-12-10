@@ -1,0 +1,17 @@
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,meta.com
+DOMAIN,api.githubcopilot.com
+DOMAIN,api.app.prod.grazie.aws.intellij.net
+DOMAIN-SUFFIX,files.oaiusercontent.com
+DOMAIN-SUFFIX,prod.grazie.aws.intellij.net
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,ios.chat.openai.com
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-KEYWORD,openai
+DOMAIN-KEYWORD,chatgpt
+DOMAIN-SUFFIX,chatgpt.livekit.cloud
+DOMAIN-SUFFIX,claude.ai
