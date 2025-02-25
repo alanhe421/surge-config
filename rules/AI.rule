@@ -17,7 +17,6 @@ DOMAIN-SUFFIX,chatgpt.livekit.cloud
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,trae.ai
-DOMAIN-SUFFIX,chat.deepseek.com
-DOMAIN-SUFFIX,api.deepseek.com
+DOMAIN-SUFFIX,deepseek.com
 DOMAIN-SUFFIX,grok.com
 
